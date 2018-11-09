@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_meal: {fileID: 1990523122760398, guid: 3202d7fb9046fdd49baaa6740afa10f3, type: 2}
-  m_newMealTime: 1.27
+  m_newMealTime: 1.3
 --- !u!114 &201227768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +558,11 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 114874929970652912, guid: fbe746d5b1f493d4e930ca2148f67c35,
+        type: 2}
+      propertyPath: m_speedFactor
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbe746d5b1f493d4e930ca2148f67c35, type: 2}

@@ -8,6 +8,10 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Text scoreLabel;
 
+    private float m_topAccelerationLevel = 35f;
+
+    private float m_accelerationCoefficient = 3f;
+
     void Awake()
     {
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
@@ -28,7 +32,12 @@ public class UIController : MonoBehaviour
         GlobalData.Score += 1;
 
         //its absolutely random algorithm lol
-        GlobalData.Acceleration += (GlobalData.Score * Time.deltaTime) / 2.5f;
+        if(GlobalData.Acceleration < m_topAccelerationLevel)
+        {
+            GlobalData.Acceleration += GlobalData.Acceleration * m_accelerationCoefficient * Time.deltaTime;
+        }
+        
+        Debug.Log(GlobalData.Acceleration);
 
         scoreLabel.text = "Score: " + GlobalData.Score.ToString();
     }

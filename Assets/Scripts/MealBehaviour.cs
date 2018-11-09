@@ -69,17 +69,21 @@ public class MealBehaviour : MonoBehaviour
         FollowTheSkewer();
 
         GlobalData.ItemsOnSkewer.Add(gameObject);
+        InputHandler.SpeedFactor -= InputHandler.SPEED_FACTOR_DECREASE_COEF;
 
         m_hasExploded = true;
     }
 
     private void FollowTheSkewer()
     {
-        gameObject.transform.position = new Vector3
-            (
-                m_skewer.transform.position.x,
-                m_skewer.transform.position.y,
-                m_posOnSkewer
-            );
+        if (gameObject != null && m_skewer != null)
+        {
+            gameObject.transform.position = new Vector3
+                (
+                    m_skewer.transform.position.x,
+                    m_skewer.transform.position.y,
+                    m_posOnSkewer
+                );
+        }
     }
 }

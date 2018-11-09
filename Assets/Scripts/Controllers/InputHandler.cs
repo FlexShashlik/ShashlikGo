@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 
 public class InputHandler : MonoBehaviour
 {
-    [SerializeField]
-    [Range(1f, 20f)]
-    private float m_speedFactor;
+    public static float SpeedFactor = 4f;
+
+    public const float SPEED_FACTOR_DECREASE_COEF = 0.2f;
 
     [SerializeField]
     private Camera m_camera;
@@ -37,7 +37,7 @@ public class InputHandler : MonoBehaviour
             float touchX = ray.GetPoint(distance).x;
             float skewerX = transform.position.x;
 
-            movement.x = GetHorizontalDirection(touchX, skewerX) * Mathf.Abs(touchX-skewerX) * m_speedFactor * Time.deltaTime;
+            movement.x = GetHorizontalDirection(touchX, skewerX) * Mathf.Abs(touchX-skewerX) * SpeedFactor * Time.deltaTime;
 
             gameObject.transform.position += movement;
         }

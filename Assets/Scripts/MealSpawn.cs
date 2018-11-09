@@ -8,7 +8,7 @@ public class MealSpawn : MonoBehaviour
 
     [SerializeField]
     [Range(0.5f, 5f)]
-    private float m_newMealTime = 0.5f;
+    private float m_newMealTime;
 
     private float m_currentMealTime;
 
@@ -19,7 +19,7 @@ public class MealSpawn : MonoBehaviour
 	
 	void Update()
     {
-        m_currentMealTime -= Time.deltaTime;
+        m_currentMealTime -= GlobalData.Acceleration * Time.deltaTime;
 
         if(m_currentMealTime <= 0f)
         {

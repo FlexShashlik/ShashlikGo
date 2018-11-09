@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     [SerializeField]
-    private Text scoreLabel;
+    private Text m_scoreLabel;
+
+    [SerializeField]
+    private Animator m_skewerOverflowAnimator;
 
     private float m_topAccelerationLevel = 35f;
 
@@ -24,21 +27,21 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        scoreLabel.text = "Score: " + GlobalData.Score.ToString();
+        m_scoreLabel.text = "Score: " + GlobalData.Score.ToString();
     }
 
     private void OnSkewerOverflow()
     {
         GlobalData.Score += 1;
 
+        m_skewerOverflowAnimator.SetTrigger("DoAnimation");
+
         //its absolutely random algorithm lol
         if(GlobalData.Acceleration < m_topAccelerationLevel)
         {
             GlobalData.Acceleration += GlobalData.Acceleration * m_accelerationCoefficient * Time.deltaTime;
         }
-        
-        Debug.Log(GlobalData.Acceleration);
 
-        scoreLabel.text = "Score: " + GlobalData.Score.ToString();
+        m_scoreLabel.text = "Score: " + GlobalData.Score.ToString();
     }
 }

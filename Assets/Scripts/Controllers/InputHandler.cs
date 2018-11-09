@@ -45,8 +45,6 @@ public class InputHandler : MonoBehaviour
 
     float GetHorizontalDirection(float touchX, float skewerX)
     {
-        Debug.Log("touchX: " + touchX);
-        Debug.Log("skewerX: " + skewerX);
         if(touchX - skewerX > m_touchBound)
         {
             return 1f;

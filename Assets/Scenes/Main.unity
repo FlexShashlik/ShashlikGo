@@ -264,6 +264,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2137974255}
+  - {fileID: 523444619}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -402,7 +403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32eeb1bfa870123458cc050b3607ffa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreLabel: {fileID: 2137974256}
+  m_scoreLabel: {fileID: 2137974256}
+  m_skewerOverflowAnimator: {fileID: 523444620}
 --- !u!1 &274998515
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +482,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!224 &523444619 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+    type: 2}
+  m_PrefabInternal: {fileID: 706696388}
+--- !u!95 &523444620 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95584039300424186, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+    type: 2}
+  m_PrefabInternal: {fileID: 706696388}
+--- !u!1001 &706696388
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 80097728}
+    m_Modifications:
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224327359073437300, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801984188708000, guid: 8e1a73bd4c6352b4ab468a791ecf1973, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114711961426483320, guid: 8e1a73bd4c6352b4ab468a791ecf1973,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801984188708000, guid: 8e1a73bd4c6352b4ab468a791ecf1973, type: 2}
+      propertyPath: m_Name
+      value: Skewer Overflow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e1a73bd4c6352b4ab468a791ecf1973, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1837560316
 Prefab:
   m_ObjectHideFlags: 0
@@ -643,6 +768,7 @@ GameObject:
   - component: {fileID: 2137974255}
   - component: {fileID: 2137974257}
   - component: {fileID: 2137974256}
+  - component: {fileID: 2137974258}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -708,3 +834,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2137974254}
   m_CullTransparentMesh: 0
+--- !u!95 &2137974258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2137974254}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

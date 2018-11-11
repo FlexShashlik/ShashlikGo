@@ -11,9 +11,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Animator m_skewerOverflowAnimator;
 
-    private float m_topAccelerationLevel = 15f;
+    private float m_topAccelerationLevel = 10f;
 
-    private float m_accelerationCoefficient = 2f;
+    private float m_accelerationCoefficient = 0.5f;
 
     void Awake()
     {

@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# 3D's Max files
+*.max
+*.uvw
+# Photoshop PSD
+*.psd

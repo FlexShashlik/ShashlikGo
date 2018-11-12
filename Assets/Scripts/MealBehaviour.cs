@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MealBehaviour : MonoBehaviour
 {
@@ -9,9 +7,6 @@ public class MealBehaviour : MonoBehaviour
     private float m_speedFactor;
 
     private float m_bound = -9f;
-
-    private float m_firstItemPos = -3.4f;
-    private float m_itemDistance = 0.5f;
 
     private bool m_hasExploded = false;
 
@@ -36,10 +31,10 @@ public class MealBehaviour : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        m_skewer = collision.gameObject;
-
-        if(m_skewer.CompareTag("Skewer") && !m_hasExploded)
+        if(collision.gameObject.CompareTag("Skewer") && !m_hasExploded)
         {
+            m_skewer = collision.gameObject;
+
             Explode();
         }
     }
@@ -64,7 +59,7 @@ public class MealBehaviour : MonoBehaviour
         Destroy(GetComponent<Rigidbody>());
         Destroy(GetComponent<Collider>());
 
-        m_posOnSkewer = m_firstItemPos + (GlobalData.ItemsOnSkewer.Count * m_itemDistance);
+        m_posOnSkewer = GlobalData.FirstItemPos + (GlobalData.ItemsOnSkewer.Count * GlobalData.ItemDistance);
 
         FollowTheSkewer();
 

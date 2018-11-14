@@ -14,17 +14,10 @@ class PlayGamesScript : MonoBehaviour
     void Start()
     {
         PlayGamesPlatform.InitializeInstance(config);
-        // recommended for debugging:
-        PlayGamesPlatform.DebugLogEnabled = true;
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
-
-        SignIn();
-    }
-
-    void SignIn()
-    {
-        Social.localUser.Authenticate(success => { });
+        
+        PlayGamesPlatform.Instance.Authenticate(success => { });
     }
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)

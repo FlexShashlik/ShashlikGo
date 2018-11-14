@@ -3,24 +3,24 @@
 class InedibleItemsSpawn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject m_inedibleItem;
+    private GameObject m_InedibleItem;
 
-    private float m_currentInedibleItemTime;
+    private float m_CurrentInedibleItemTime;
 
     void Start()
     {
-        m_currentInedibleItemTime = Random.Range(0.5f, 5f);
+        m_CurrentInedibleItemTime = Random.Range(0.5f, 5f);
     }
 
     void Update()
     {
-        m_currentInedibleItemTime -= GlobalData.Acceleration * Time.deltaTime;
+        m_CurrentInedibleItemTime -= GlobalData.Acceleration * Time.deltaTime;
 
-        if (m_currentInedibleItemTime <= 0f)
+        if (m_CurrentInedibleItemTime <= 0f)
         {
-            m_currentInedibleItemTime = Random.Range(0.5f, 5f);
+            m_CurrentInedibleItemTime = Random.Range(0.5f, 5f);
 
-            Instantiate(m_inedibleItem, new Vector3(Random.Range(-2.7f, 2.8f), m_inedibleItem.transform.position.y, 9f), Quaternion.identity);
+            Instantiate(m_InedibleItem, new Vector3(Random.Range(-2.7f, 2.8f), m_InedibleItem.transform.position.y, 9f), Quaternion.identity);
         }
     }
 }

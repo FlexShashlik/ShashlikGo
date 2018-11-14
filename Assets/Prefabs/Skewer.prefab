@@ -165,6 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b880ffa8e52074ba46adca1b23b544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speedFactor: 2.55
-  m_camera: {fileID: 0}
-  m_touchBound: 0.126
+  m_TouchBound: 0.126

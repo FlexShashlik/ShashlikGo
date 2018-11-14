@@ -6,15 +6,15 @@ public class InputHandler : MonoBehaviour
 
     public const float SPEED_FACTOR_DECREASE_COEF = 0.2f;
     
-    private Camera m_camera;
+    private Camera m_Camera;
 
     [SerializeField]
     [Range(0.01f, 0.8f)]
-    private float m_touchBound;
+    private float m_TouchBound;
 
     void Start()
     {
-        m_camera = Camera.main;
+        m_Camera = Camera.main;
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class InputHandler : MonoBehaviour
         if (Input.touchCount <= 0)
             return;
 
-        Ray ray = m_camera.ScreenPointToRay(Input.GetTouch(0).position);
+        Ray ray = m_Camera.ScreenPointToRay(Input.GetTouch(0).position);
         Plane plane = new Plane(Vector3.up, transform.position);
         float distance = 0f;
         
@@ -41,11 +41,11 @@ public class InputHandler : MonoBehaviour
 
     float GetHorizontalDirection(float touchX, float skewerX)
     {
-        if(touchX - skewerX > m_touchBound)
+        if(touchX - skewerX > m_TouchBound)
         {
             return 1f;
         }
-        else if (skewerX - touchX > m_touchBound)
+        else if (skewerX - touchX > m_TouchBound)
         {
             return -1f;
         }

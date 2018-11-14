@@ -4,12 +4,12 @@ public class InedibleItemsBehaviour : MonoBehaviour
 {
     [SerializeField]
     [Range(1f, 20f)]
-    private float m_speedFactor;
+    private float m_SpeedFactor;
 
-    private float m_bound = -9f;
+    private float m_Bound = -9f;
 
     [SerializeField]
-    private GameObject m_explosionEffect;
+    private GameObject m_ExplosionEffect;
 
     void Update()
     {
@@ -26,20 +26,20 @@ public class InedibleItemsBehaviour : MonoBehaviour
 
     private void Move()
     {
-        if (transform.position.z < m_bound)
+        if (transform.position.z < m_Bound)
         {
             Destroy(gameObject);
         }
 
         Vector3 movement = Vector3.zero;
-        movement.z = m_speedFactor * GlobalData.Acceleration * Time.deltaTime;
+        movement.z = m_SpeedFactor * GlobalData.Acceleration * Time.deltaTime;
 
         gameObject.transform.position -= movement;
     }
 
     private void Explode()
     {
-        Instantiate(m_explosionEffect, transform.position, Quaternion.identity);
+        Instantiate(m_ExplosionEffect, transform.position, Quaternion.identity);
 
         Messenger.Broadcast(GameEvent.PICKED_UP_INEDIBLE_ITEM);
 

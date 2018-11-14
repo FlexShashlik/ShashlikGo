@@ -32,8 +32,11 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        m_ScoreLabel.text = "Score: " + GlobalData.Score.ToString();
-        m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
+        if (m_ScoreLabel != null && m_LivesLabel != null)
+        {
+            m_ScoreLabel.text = "Score: " + GlobalData.Score.ToString();
+            m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
+        }
     }
 
     private void OnSkewerOverflow()
@@ -58,7 +61,7 @@ public class UIController : MonoBehaviour
         if(GlobalData.Lives < 0)
         {
             PlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_score, GlobalData.Score);
-            StartCoroutine(LoadAsynchrounously(1)); //The End scene loading
+            StartCoroutine(LoadAsynchrounously(1)); //load the end scene
         }
         else
         {
@@ -79,5 +82,17 @@ public class UIController : MonoBehaviour
     public void ShowLeaderboards()
     {
         PlayGamesScript.ShowLeaderboardUI();
+    }
+
+    public void Restart()
+    {
+        //Reset all data
+        GlobalData.Score = 0;
+        GlobalData.Lives = 3;
+        GlobalData.Acceleration = 1f;
+        GlobalData.ItemsOnSkewer.Clear();
+
+        //Load main scene
+        StartCoroutine(LoadAsynchrounously(0)); 
     }
 }

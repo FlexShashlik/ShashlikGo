@@ -41,6 +41,8 @@ public class InedibleItemsBehaviour : MonoBehaviour
     {
         Instantiate(m_ExplosionEffect, transform.position, Quaternion.identity);
 
+        VibrationController.Vibrate(200);
+
         Messenger.Broadcast(GameEvent.PICKED_UP_INEDIBLE_ITEM);
 
         Destroy(gameObject);

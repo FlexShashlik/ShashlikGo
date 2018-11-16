@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -61,21 +59,11 @@ public class UIController : MonoBehaviour
         if(GlobalData.Lives < 0)
         {
             PlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_score, GlobalData.Score);
-            StartCoroutine(LoadAsynchrounously(1)); //load the end scene
+            LevelChanger.FadeToLevel(1); //load the end scene
         }
         else
         {
             m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
-        }
-    }
-
-    IEnumerator LoadAsynchrounously(int sceneIndex)
-    {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
-
-        while (!asyncOperation.isDone)
-        {
-            yield return null;
         }
     }
 
@@ -93,6 +81,6 @@ public class UIController : MonoBehaviour
         GlobalData.ItemsOnSkewer.Clear();
 
         //Load main scene
-        StartCoroutine(LoadAsynchrounously(0)); 
+        LevelChanger.FadeToLevel(0);
     }
 }

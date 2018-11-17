@@ -59,6 +59,7 @@ public class UIController : MonoBehaviour
         if(GlobalData.Lives < 0)
         {
             PlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_score, GlobalData.Score);
+
             LevelChanger.FadeToLevel(1); //load the end scene
         }
         else

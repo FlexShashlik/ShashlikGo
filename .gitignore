@@ -41,3 +41,7 @@ sysinfo.txt
 *.uvw
 # Photoshop PSD
 *.psd
+/Assets/google-services.json.meta
+/Assets/google-services.json
+/Assets/GooglePlayGames/GameInfo.cs
+/Assets/GooglePlayGames/GameInfo.cs.meta

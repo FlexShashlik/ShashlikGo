@@ -67,21 +67,4 @@ public class UIController : MonoBehaviour
             m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
         }
     }
-
-    public void ShowLeaderboards()
-    {
-        PlayGamesScript.ShowLeaderboardUI();
-    }
-
-    public void Restart()
-    {
-        //Reset all data
-        GlobalData.Score = 0;
-        GlobalData.Lives = 3;
-        GlobalData.Acceleration = 1f;
-        GlobalData.ItemsOnSkewer.Clear();
-
-        //Load main scene
-        LevelChanger.FadeToLevel(0);
-    }
 }

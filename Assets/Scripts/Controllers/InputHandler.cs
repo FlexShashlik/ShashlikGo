@@ -2,7 +2,7 @@
 
 public class InputHandler : MonoBehaviour
 {
-    public static float SpeedFactor = 4f;
+    public static float SpeedFactor = 7f;
 
     public const float SPEED_FACTOR_DECREASE_COEF = 0.2f;
     

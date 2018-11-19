@@ -11,11 +11,6 @@ public class EndSceneUIController : MonoBehaviour
 
     void Awake()
     {
-        if(GlobalData.Score > GlobalData.MaxScore)
-        {
-            GlobalData.MaxScore = GlobalData.Score;
-        }
-
         m_TextBestResult.text = "Best result: " + GlobalData.MaxScore.ToString();
         m_TextCurrentResult.text = "Current result: " + GlobalData.Score.ToString();
     }

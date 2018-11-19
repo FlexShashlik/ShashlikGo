@@ -17,7 +17,8 @@ class PlayGamesScript : MonoBehaviour
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
 
-        Social.localUser.Authenticate(success => { if (success) m_SuccessAuth = true; });
+        Social.localUser.Authenticate
+            (success => { if (success) { m_SuccessAuth = true; GetUserMaxScore(); } });
     }
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)

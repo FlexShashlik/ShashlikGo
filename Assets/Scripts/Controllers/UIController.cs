@@ -18,6 +18,8 @@ public class UIController : MonoBehaviour
 
     void Awake()
     {
+        PlayGamesScript.GetUserMaxScore();
+
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
         Messenger.AddListener(GameEvent.PICKED_UP_INEDIBLE_ITEM, OnPickingUpInedibleItem);
     }
@@ -30,11 +32,8 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        if (m_ScoreLabel != null && m_LivesLabel != null)
-        {
-            m_ScoreLabel.text = "Score: " + GlobalData.Score.ToString();
-            m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
-        }
+        m_ScoreLabel.text = "Score: " + GlobalData.Score.ToString();
+        m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
     }
 
     private void OnSkewerOverflow()

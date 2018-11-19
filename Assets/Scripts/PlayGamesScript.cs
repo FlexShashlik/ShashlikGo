@@ -8,6 +8,8 @@ class PlayGamesScript : MonoBehaviour
     PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
        .Build();
 
+    private static bool m_SuccessAuth = false;
+
     void Start()
     {
         PlayGamesPlatform.InitializeInstance(config);
@@ -15,33 +17,35 @@ class PlayGamesScript : MonoBehaviour
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
 
-        Social.localUser.Authenticate(success => { });
-        //PlayGamesPlatform.Instance.Authenticate(success => { });
+        Social.localUser.Authenticate(success => { if (success) m_SuccessAuth = true; });
     }
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)
     {
-        Social.ReportScore(score, leaderboardId, success => { });
+        if (m_SuccessAuth) Social.ReportScore(score, leaderboardId, success => { });
     }
 
     public static void ShowLeaderboardUI()
     {
-        Social.ShowLeaderboardUI();
+        if (m_SuccessAuth) Social.ShowLeaderboardUI();
     }
 
-    public static void GetUserMaxScore(Text bestResult)
+    public static void GetUserMaxScore()
     {
-        PlayGamesPlatform.Instance.LoadScores
-            (
-                GPGSIds.leaderboard_score,
-                LeaderboardStart.PlayerCentered,
-                1,
-                LeaderboardCollection.Public,
-                LeaderboardTimeSpan.AllTime,
-                data =>
-                {
-                    bestResult.text = "Best result: " + data.PlayerScore.formattedValue;
-                }
-            );
+        if (m_SuccessAuth)
+        {
+            PlayGamesPlatform.Instance.LoadScores
+                (
+                    GPGSIds.leaderboard_score,
+                    LeaderboardStart.PlayerCentered,
+                    1,
+                    LeaderboardCollection.Public,
+                    LeaderboardTimeSpan.AllTime,
+                    data =>
+                    {
+                        GlobalData.MaxScore = data.PlayerScore.value;
+                    }
+                );
+        }
     }
 }

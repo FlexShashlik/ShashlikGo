@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4720753545414234}
   - component: {fileID: 33032206410636994}
   - component: {fileID: 23304627288214412}
-  - component: {fileID: 114823472451403948}
   - component: {fileID: 65754191742789944}
   - component: {fileID: 54000117645660988}
+  - component: {fileID: 114304044507635936}
   m_Layer: 0
   m_Name: Pork
   m_TagString: Untagged
@@ -113,7 +113,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.016956938, y: 0.009120097, z: 0.0016346178}
   m_Center: {x: -0.0016859912, y: 0.00061375415, z: 0.0021702491}
---- !u!114 &114823472451403948
+--- !u!114 &114304044507635936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1732262868885538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ba8225964b6ae34dbd803414dbe7efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 62f26330721f03645aaf9ec4640cb5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speedFactor: 4
-  m_explosionEffect: {fileID: 1666061323070264, guid: e2a481a5791078143aa5ec9d7ef2efa2,
+  m_SpeedFactor: 8.6
+  m_ExplosionEffect: {fileID: 1666061323070264, guid: e2a481a5791078143aa5ec9d7ef2efa2,
     type: 2}

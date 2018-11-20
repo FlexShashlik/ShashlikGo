@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "907673663094",
+    "firebase_url": "https://shashlikgo-56292066.firebaseio.com",
+    "project_id": "shashlikgo-56292066",
+    "storage_bucket": "shashlikgo-56292066.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907673663094:android:b40c2df5923c9f51",
+        "android_client_info": {
+          "package_name": "com.LonelyPenguins.ShashlikGo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907673663094-epv1bln2vo3u38f1jmigsfhff5pgd1gt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.LonelyPenguins.ShashlikGo",
+            "certificate_hash": "6c848e201697f229d7dab0257f985eaac0628d76"
+          }
+        },
+        {
+          "client_id": "907673663094-nt0u1s76de3k82e2mq1ppeehpblvclno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.LonelyPenguins.ShashlikGo",
+            "certificate_hash": "b3258fa15b63a55050eac9bcae10b5f81b011dae"
+          }
+        },
+        {
+          "client_id": "907673663094-4jhlkckd3qh8i0h3peu505ivup0qvk69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDq_5Yg2-YgvD1hiL_uKjdxiulhhI-A1PI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907673663094-4jhlkckd3qh8i0h3peu505ivup0qvk69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

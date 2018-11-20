@@ -1,0 +1,100 @@
+.NET framework version changed from 3.5 to 4.5
+
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneOSX enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneOSXIntel enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneWindows enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: iOS enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: Android enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneLinux enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneWindows64 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: WebGL enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneLinux64 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: StandaloneOSXIntel64 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: Tizen enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: PSP2 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: PS4 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: XboxOne enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: SamsungTV enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: N3DS enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: WiiU enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: tvOS enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: Switch enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Compat.dll: enabled version 5.4.2
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneOSX enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneOSXIntel enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneWindows enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: iOS enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: Android enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneLinux enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneWindows64 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: WebGL enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneLinux64 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: StandaloneOSXIntel64 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: Tizen enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: PSP2 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: PS4 enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: XboxOne enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: SamsungTV enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: N3DS enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: WiiU enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: tvOS enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: Switch enabled True (current: False)
+.NET selected 4.5, supported (4.5)
+Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll: enabled version 5.4.2
+Changing labels of Assets/Firebase/Editor/FirebaseAnalytics_v1.0.0_manifest.txt
+from: 
+to: gvh, gvh_version-1.0.0, gvh_manifest
+
+Changing labels of Assets/Firebase/Editor/FirebaseAnalytics_v1.0.1_manifest.txt
+from: 
+to: gvh, gvh_version-1.0.1, gvh_manifest
+
+Changing labels of Assets/Firebase/Editor/FirebaseAnalytics_v1.1.0_manifest.txt
+from: 
+to: gvh, gvh_version-1.1.0, gvh_manifest
+
+Changing labels of Assets/Firebase/Editor/FirebaseAnalytics_v1.1.1_manifest.txt
+from: 
+to: gvh, gvh_version-1.1.1, gvh_manifest
+
+Changing labels of Assets/Firebase/Editor/FirebaseAnalytics_v1.1.2_manifest.txt
+from: 
+to: gvh, gvh_version-1.1.2, gvh_manifest
+

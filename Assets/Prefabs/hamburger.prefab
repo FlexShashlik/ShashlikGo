@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23173616892928042}
   - component: {fileID: 65440037859328664}
   - component: {fileID: 54446652822176414}
-  - component: {fileID: 114773827318056424}
+  - component: {fileID: 114483112201184568}
   m_Layer: 0
   m_Name: hamburger
   m_TagString: Untagged
@@ -113,7 +113,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9051552, y: 0.90515524, z: 0.43493572}
   m_Center: {x: 0, y: 0, z: 0.000000014901161}
---- !u!114 &114773827318056424
+--- !u!114 &114483112201184568
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1227962800235064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 171b13d80b932ff4ea87f5102926e90f, type: 3}
+  m_Script: {fileID: 11500000, guid: d55769f82ecd5a54eb88731a74a48547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpeedFactor: 10

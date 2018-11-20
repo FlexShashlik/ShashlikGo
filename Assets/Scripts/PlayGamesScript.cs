@@ -8,7 +8,7 @@ class PlayGamesScript : MonoBehaviour
     PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
        .Build();
 
-    private static bool m_SuccessAuth = false;
+    public static bool SuccessAuth = false;
 
     void Start()
     {
@@ -17,23 +17,36 @@ class PlayGamesScript : MonoBehaviour
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
 
+        Auth();
+    }
+
+    public static void Auth()
+    {
         Social.localUser.Authenticate
-            (success => { if (success) { m_SuccessAuth = true; GetUserMaxScore(); } });
+            (success => { if (success) { SuccessAuth = true; GetUserMaxScore(); } });
     }
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)
     {
-        if (m_SuccessAuth) Social.ReportScore(score, leaderboardId, success => { });
+        if (SuccessAuth)
+            Social.ReportScore(score, leaderboardId, success => { });
     }
 
     public static void ShowLeaderboardUI()
     {
-        if (m_SuccessAuth) Social.ShowLeaderboardUI();
+        if (SuccessAuth)
+        {
+            Social.ShowLeaderboardUI();
+        }
+        else
+        {
+            Auth();
+        }
     }
 
     public static void GetUserMaxScore()
     {
-        if (m_SuccessAuth)
+        if (SuccessAuth)
         {
             PlayGamesPlatform.Instance.LoadScores
                 (

@@ -18,10 +18,10 @@ public class UIController : MonoBehaviour
 
     void Awake()
     {
-        PlayGamesScript.GetUserMaxScore();
-
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
         Messenger.AddListener(GameEvent.PICKED_UP_INEDIBLE_ITEM, OnPickingUpInedibleItem);
+
+        PlayGamesScript.GetUserMaxScore();
     }
 
     void OnDestroy()
@@ -57,7 +57,14 @@ public class UIController : MonoBehaviour
 
         if(GlobalData.Lives < 0)
         {
-            PlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_score, GlobalData.Score);
+            if (PlayGamesScript.SuccessAuth)
+            {
+                PlayGamesScript.AddScoreToLeaderboard(GPGSIds.leaderboard_score, GlobalData.Score);
+            }
+            else
+            {
+                PlayGamesScript.Auth();
+            }
 
             LevelChanger.FadeToLevel(1); //load the end scene
         }

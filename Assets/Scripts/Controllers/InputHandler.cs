@@ -19,7 +19,8 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
-        if (Input.touchCount <= 0) return;
+        if (Input.touchCount <= 0)
+            return;
 
         Ray ray = m_Camera.ScreenPointToRay(Input.GetTouch(0).position);
         Plane plane = new Plane(Vector3.up, transform.position);

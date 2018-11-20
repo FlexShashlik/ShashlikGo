@@ -27,6 +27,7 @@ public class EndSceneUIController : MonoBehaviour
         GlobalData.Lives = 3;
         GlobalData.Acceleration = 1f;
         GlobalData.ItemsOnSkewer.Clear();
+        InputHandler.SpeedFactor = 7f;
 
         //Load main scene
         LevelChanger.FadeToLevel(0);

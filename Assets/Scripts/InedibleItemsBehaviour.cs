@@ -19,9 +19,7 @@ public class InedibleItemsBehaviour : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Skewer"))
-        {
             Explode();
-        }
     }
 
     private void Move()

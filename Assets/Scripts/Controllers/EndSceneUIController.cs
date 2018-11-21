@@ -30,6 +30,6 @@ public class EndSceneUIController : MonoBehaviour
         InputHandler.SpeedFactor = 7f;
 
         //Load main scene
-        LevelChanger.FadeToLevel(0);
+        LevelChanger.FadeToLevel(1);
     }
 }

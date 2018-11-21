@@ -1,7 +1,6 @@
 ﻿using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine;
-using UnityEngine.UI;
 
 class PlayGamesScript : MonoBehaviour
 {

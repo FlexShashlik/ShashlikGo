@@ -14,13 +14,16 @@ public static class VibrationController
 
     public static void Vibrate(long milliseconds)
     {
-        if (isAndroid())
+        if (PlayerSettings.PrefEnable(PlayerSettings.Vibration))
         {
-            vibrator.Call("vibrate", milliseconds);
-        }
-        else
-        {
-            Handheld.Vibrate();
+            if (isAndroid())
+            {
+                vibrator.Call("vibrate", milliseconds);
+            }
+            else
+            {
+                Handheld.Vibrate();
+            }
         }
     }
 

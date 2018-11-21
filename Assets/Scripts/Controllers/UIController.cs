@@ -66,7 +66,7 @@ public class UIController : MonoBehaviour
                 PlayGamesScript.Auth();
             }
 
-            LevelChanger.FadeToLevel(1); //load the end scene
+            LevelChanger.FadeToLevel(2); //load the end scene
         }
         else
         {

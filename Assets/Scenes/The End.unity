@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 26798628}
   - component: {fileID: 26798627}
   m_Layer: 0
-  m_Name: Text Best Result
+  m_Name: TextBestResult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 109789172}
   - component: {fileID: 109789171}
   m_Layer: 0
-  m_Name: Text Current Result
+  m_Name: TextCurrentResult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 1733977215}
   - component: {fileID: 1733977214}
   m_Layer: 0
-  m_Name: Button Leaderboard
+  m_Name: ButtonLeaderboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

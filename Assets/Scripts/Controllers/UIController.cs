@@ -12,6 +12,14 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private Animator m_SkewerOverflowAnimator;
 
+    [SerializeField]
+    private Button m_ButtonPause;
+
+    [SerializeField]
+    private Sprite m_SpritePause, m_SpritePlay;
+
+    private bool m_GameOnPause = false;
+
     private float m_TopAccelerationLevel = 10f;
 
     private float m_AccelerationCoefficient = 1.1f;
@@ -72,5 +80,21 @@ public class UIController : MonoBehaviour
         {
             m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
         }
+    }
+
+    public void OnPause()
+    {
+        if (!m_GameOnPause)
+        {
+            Time.timeScale = 0;
+            m_ButtonPause.image.sprite = m_SpritePlay;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            m_ButtonPause.image.sprite = m_SpritePause;
+        }
+
+        m_GameOnPause = !m_GameOnPause;
     }
 }

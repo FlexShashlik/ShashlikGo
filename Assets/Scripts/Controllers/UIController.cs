@@ -4,10 +4,13 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     [SerializeField]
-    private Text m_ScoreLabel;
+    private Text m_TextLives;
 
     [SerializeField]
-    private Text m_LivesLabel;
+    private Text m_TextScore;
+
+    [SerializeField]
+    private Text m_TextCoins;
 
     [SerializeField]
     private Animator m_SkewerOverflowAnimator;
@@ -27,7 +30,8 @@ public class UIController : MonoBehaviour
     void Awake()
     {
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
-        Messenger.AddListener(GameEvent.PICKED_UP_INEDIBLE_ITEM, OnPickingUpInedibleItem);
+        Messenger.AddListener(GameEvent.INEDIBLE_ITEM_PICKUP, OnInedibleItemPickup);
+        Messenger.AddListener(GameEvent.СOIN_PICKUP, OnCoinPickup);
 
         PlayGamesScript.GetUserMaxScore();
     }
@@ -35,13 +39,15 @@ public class UIController : MonoBehaviour
     void OnDestroy()
     {
         Messenger.RemoveListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
-        Messenger.RemoveListener(GameEvent.PICKED_UP_INEDIBLE_ITEM, OnPickingUpInedibleItem);
+        Messenger.RemoveListener(GameEvent.INEDIBLE_ITEM_PICKUP, OnInedibleItemPickup);
+        Messenger.RemoveListener(GameEvent.СOIN_PICKUP, OnCoinPickup);
     }
 
     void Start()
     {
-        m_ScoreLabel.text = "Score: " + GlobalData.Score.ToString();
-        m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
+        m_TextLives.text = $"Lives: {GlobalData.Lives}";
+        m_TextScore.text = $"Score: {GlobalData.Score}";
+        m_TextCoins.text = $"Coins: {GlobalData.Coins}";
     }
 
     private void OnSkewerOverflow()
@@ -56,10 +62,10 @@ public class UIController : MonoBehaviour
             GlobalData.Acceleration += GlobalData.Acceleration * m_AccelerationCoefficient * Time.deltaTime;
         }
 
-        m_ScoreLabel.text = "Score: " + GlobalData.Score.ToString();
+        m_TextScore.text = $"Score: {GlobalData.Score}";
     }
 
-    private void OnPickingUpInedibleItem()
+    private void OnInedibleItemPickup()
     {
         GlobalData.Lives--;
 
@@ -78,8 +84,13 @@ public class UIController : MonoBehaviour
         }
         else
         {
-            m_LivesLabel.text = "Lives: " + GlobalData.Lives.ToString();
+            m_TextLives.text = $"Lives: {GlobalData.Lives}";
         }
+    }
+
+    public void OnCoinPickup()
+    {
+        m_TextCoins.text =  $"Coins: {++GlobalData.Coins}";
     }
 
     public void OnPause()

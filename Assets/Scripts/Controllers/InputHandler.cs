@@ -10,7 +10,9 @@ public class InputHandler : MonoBehaviour
 
     [SerializeField]
     [Range(0.01f, 0.8f)]
-    private float m_TouchBound;
+    private float m_TouchBoundX;
+
+    private float m_TouchBoundY = 0.31f;
 
     void Start()
     {
@@ -29,23 +31,26 @@ public class InputHandler : MonoBehaviour
         if (plane.Raycast(ray, out distance))
         {
             Vector3 movement = Vector3.zero;
+            
+            if (ray.GetPoint(distance).z < m_TouchBoundY)
+            {
+                float touchX = ray.GetPoint(distance).x;
+                float skewerX = transform.position.x;
 
-            float touchX = ray.GetPoint(distance).x;
-            float skewerX = transform.position.x;
+                movement.x = GetHorizontalDirection(touchX, skewerX) * Mathf.Abs(touchX - skewerX) * SpeedFactor * Time.deltaTime;
 
-            movement.x = GetHorizontalDirection(touchX, skewerX) * Mathf.Abs(touchX-skewerX) * SpeedFactor * Time.deltaTime;
-
-            gameObject.transform.position += movement;
+                gameObject.transform.position += movement;
+            }
         }
 	}
 
     float GetHorizontalDirection(float touchX, float skewerX)
     {
-        if(touchX - skewerX > m_TouchBound)
+        if(touchX - skewerX > m_TouchBoundX)
         {
             return 1f;
         }
-        else if (skewerX - touchX > m_TouchBound)
+        else if (skewerX - touchX > m_TouchBoundX)
         {
             return -1f;
         }

@@ -23,8 +23,9 @@ public class EndSceneUIController : MonoBehaviour
     public void Restart()
     {
         //Reset all data
-        GlobalData.Score = 0;
         GlobalData.Lives = 3;
+        GlobalData.Score = 0;
+        GlobalData.Coins = 0;
         GlobalData.Acceleration = 1f;
         GlobalData.ItemsOnSkewer.Clear();
         InputHandler.SpeedFactor = 7f;

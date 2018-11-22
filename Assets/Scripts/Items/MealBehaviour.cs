@@ -21,7 +21,7 @@ public class MealBehaviour : MonoBehaviour
     {
         if(!m_HasExploded)
         {
-            Move();
+            Fall();
         }
         else
         {
@@ -39,7 +39,7 @@ public class MealBehaviour : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void Fall()
     {
         if (transform.position.z < m_Bound)
         {

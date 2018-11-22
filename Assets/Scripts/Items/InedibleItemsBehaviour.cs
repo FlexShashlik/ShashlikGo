@@ -13,7 +13,7 @@ public class InedibleItemsBehaviour : MonoBehaviour
 
     void Update()
     {
-        Move();
+        Fall();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -22,7 +22,7 @@ public class InedibleItemsBehaviour : MonoBehaviour
             Explode();
     }
 
-    private void Move()
+    private void Fall()
     {
         if (transform.position.z < m_Bound)
         {
@@ -41,7 +41,7 @@ public class InedibleItemsBehaviour : MonoBehaviour
 
         VibrationController.Vibrate(200);
 
-        Messenger.Broadcast(GameEvent.PICKED_UP_INEDIBLE_ITEM);
+        Messenger.Broadcast(GameEvent.INEDIBLE_ITEM_PICKUP);
 
         Destroy(gameObject);
     }

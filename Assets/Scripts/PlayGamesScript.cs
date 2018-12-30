@@ -22,7 +22,7 @@ class PlayGamesScript : MonoBehaviour
     public static void Auth()
     {
         Social.localUser.Authenticate
-            (success => { if (success) { SuccessAuth = true; GetUserMaxScore(); } });
+            (success => { if (success) { SuccessAuth = true; GetUserMaxScore(); }});
     }
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)

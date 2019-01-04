@@ -11,7 +11,7 @@ class GlobalData
 
     public static float Acceleration = 1f;
 
-    public static float FirstItemPos = -3.4f;
+    public static float FirstItemPos = -3f;
     public static float ItemDistance = 0.5f;
 
     public static long MaxScore = 0;

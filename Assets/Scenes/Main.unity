@@ -431,7 +431,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TextLives: {fileID: 1970155647}
   m_TextScore: {fileID: 2137974256}
-  m_TextCoins: {fileID: 0}
   m_SkewerOverflowAnimator: {fileID: 1041213394}
   m_ButtonPause: {fileID: 981614697}
   m_SpritePause: {fileID: 21300000, guid: d7f1f460b7cab42429a3f426143ba0ac, type: 3}
@@ -572,7 +571,7 @@ Prefab:
     - target: {fileID: 224767155290870630, guid: a997777af9907f44c9084a5e19833e49,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224767155290870630, guid: a997777af9907f44c9084a5e19833e49,
         type: 2}
@@ -879,7 +878,7 @@ Prefab:
     - target: {fileID: 224366848848481506, guid: 4c9feee4a71e1554f9c9e5bd42440395,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224366848848481506, guid: 4c9feee4a71e1554f9c9e5bd42440395,
         type: 2}
@@ -1140,7 +1139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12820226, g: 0, b: 0.5686275, a: 1}
+  m_Color: {r: 0.69803923, g: 0.79607844, b: 0.21960784, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

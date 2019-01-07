@@ -47,7 +47,7 @@ public class CoinBehaviour : MonoBehaviour
     {
         Instantiate(m_ExplosionEffect, transform.position, Quaternion.identity);
 
-        Messenger.Broadcast(GameEvent.СOIN_PICKUP);
+        //Messenger.Broadcast(GameEvent.СOIN_PICKUP);
 
         Destroy(gameObject);
     }

@@ -10,9 +10,6 @@ public class UIController : MonoBehaviour
     private Text m_TextScore;
 
     [SerializeField]
-    private Text m_TextCoins;
-
-    [SerializeField]
     private Animator m_SkewerOverflowAnimator;
 
     [SerializeField]
@@ -31,7 +28,6 @@ public class UIController : MonoBehaviour
     {
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
         Messenger.AddListener(GameEvent.INEDIBLE_ITEM_PICKUP, OnInedibleItemPickup);
-        Messenger.AddListener(GameEvent.СOIN_PICKUP, OnCoinPickup);
 
         PlayGamesScript.GetUserMaxScore();
     }
@@ -40,14 +36,12 @@ public class UIController : MonoBehaviour
     {
         Messenger.RemoveListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
         Messenger.RemoveListener(GameEvent.INEDIBLE_ITEM_PICKUP, OnInedibleItemPickup);
-        Messenger.RemoveListener(GameEvent.СOIN_PICKUP, OnCoinPickup);
     }
 
     void Start()
     {
         m_TextLives.text = $"Lives: {GlobalData.Lives}";
         m_TextScore.text = $"Score: {GlobalData.Score}";
-        m_TextCoins.text = $"Coins: {GlobalData.Coins}";
     }
 
     private void OnSkewerOverflow()
@@ -86,11 +80,6 @@ public class UIController : MonoBehaviour
         {
             m_TextLives.text = $"Lives: {GlobalData.Lives}";
         }
-    }
-
-    public void OnCoinPickup()
-    {
-        m_TextCoins.text =  $"Coins: {++GlobalData.Coins}";
     }
 
     public void OnPause()

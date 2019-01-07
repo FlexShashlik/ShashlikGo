@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 78e35f4146d89304e82271ed4db92373
+guid: 3cdc513a4e7c77f4aa1c8eeff1dd138e
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 01 - Default
+    2100000: 03 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: simple knife
+    4300000: GeoSphere001
   externalObjects: {}
   materials:
     importMaterials: 1

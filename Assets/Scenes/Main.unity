@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40703f1bb3e920a4d8f5d0548ad1bd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Meal: {fileID: 1732262868885538, guid: fc1a898406159854896bae0c8c692aa1, type: 2}
+  m_Meal: {fileID: 1059606132632078, guid: 8801255aa61b74d4585729647f96a33d, type: 2}
   m_NewMealTime: 3
 --- !u!114 &201227769
 MonoBehaviour:
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.69803923, g: 0.79607844, b: 0.21960784, a: 1}
+  m_Color: {r: 0.97647065, g: 0.8431373, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

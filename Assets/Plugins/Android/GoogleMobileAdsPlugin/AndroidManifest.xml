@@ -11,5 +11,11 @@ required for displaying ads.
   <uses-sdk android:minSdkVersion="14"
       android:targetSdkVersion="19" />
   <application>
+    <meta-data
+            android:name="com.google.android.gms.ads.ca-app-pub-2456669905266460~7259075551"
+            android:value="ca-app-pub-2456669905266460~7259075551"/>
+    <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
   </application>
 </manifest>

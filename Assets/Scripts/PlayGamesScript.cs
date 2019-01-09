@@ -1,5 +1,7 @@
 ﻿using GooglePlayGames;
 using GooglePlayGames.BasicApi;
+using GoogleMobileAds;
+using GoogleMobileAds.Api;
 using UnityEngine;
 
 class PlayGamesScript : MonoBehaviour
@@ -11,10 +13,21 @@ class PlayGamesScript : MonoBehaviour
 
     void Start()
     {
+        #if UNITY_ANDROID
+                string appId = "ca-app-pub-3940256099942544~3347511713";
+        #elif UNITY_IPHONE
+                string appId = "unexpected_platform";
+        #else
+                string appId = "unexpected_platform";
+        #endif
+
         PlayGamesPlatform.InitializeInstance(config);
 
         // Activate the Google Play Games platform
         PlayGamesPlatform.Activate();
+
+        //Activate Google AdMob
+        MobileAds.Initialize(appId);
 
         Auth();
     }

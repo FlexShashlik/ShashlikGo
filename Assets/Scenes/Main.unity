@@ -316,7 +316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &176382632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_ButtonPause: {fileID: 981614697}
   m_SpritePause: {fileID: 21300000, guid: d7f1f460b7cab42429a3f426143ba0ac, type: 3}
   m_SpritePlay: {fileID: 21300000, guid: 7e954e9ce80721f49839d2d414904c47, type: 3}
-  adPopup: {fileID: 176382635}
+  m_AdPopup: {fileID: 176382635}
 --- !u!114 &201227770
 MonoBehaviour:
   m_ObjectHideFlags: 0

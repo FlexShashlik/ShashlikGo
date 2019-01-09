@@ -21,7 +21,7 @@ public class UIController : MonoBehaviour
     private Sprite m_SpritePause, m_SpritePlay;
 
     [SerializeField]
-    private AdPopup adPopup;
+    private AdPopup m_AdPopup;
 
     private bool m_GameOnPause = false;
 
@@ -51,8 +51,6 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        adPopup.Close();
-
         m_TextLives.text = $"Lives: {GlobalData.Lives}";
         m_TextScore.text = $"Score: {GlobalData.Score}";
 
@@ -87,6 +85,8 @@ public class UIController : MonoBehaviour
         MonoBehaviour.print(
             "HandleRewardBasedVideoFailedToLoad event received with message: "
                              + args.Message);
+        OnPause();
+        LevelChanger.FadeToLevel(2); //load the end scene
     }
 
     public void HandleRewardBasedVideoOpened(object sender, EventArgs args)
@@ -101,7 +101,6 @@ public class UIController : MonoBehaviour
 
     public void HandleRewardBasedVideoClosed(object sender, EventArgs args)
     {
-        RequestRewardBasedVideo();
         MonoBehaviour.print("HandleRewardBasedVideoClosed event received");
     }
 
@@ -112,6 +111,11 @@ public class UIController : MonoBehaviour
         MonoBehaviour.print(
             "HandleRewardBasedVideoRewarded event received for "
                         + amount.ToString() + " " + type);
+
+        GlobalData.Lives = 3;
+        m_TextLives.text = $"Lives: {GlobalData.Lives}";
+        m_AdWasShown = true;
+        m_AdPopup.gameObject.SetActive(false);
     }
 
     public void HandleRewardBasedVideoLeftApplication(object sender, EventArgs args)
@@ -151,16 +155,13 @@ public class UIController : MonoBehaviour
             }
 
             //AdRequest
-            Time.timeScale = 0;
-            m_ButtonPause.image.sprite = m_SpritePlay;
-
-            //Show popup
-            adPopup.Open();
-
-            //Save progress and continue game:
-
-            //Or if ad doesn't exits then:
-            //LevelChanger.FadeToLevel(2); //load the end scene
+            if (!m_AdWasShown)
+            {
+                OnPause();
+                m_AdPopup.Open();
+            }
+            else
+                LevelChanger.FadeToLevel(2); //load the end scene
         }
         else
         {
@@ -187,9 +188,9 @@ public class UIController : MonoBehaviour
     private void RequestRewardBasedVideo()
     {
         #if UNITY_ANDROID
-                string adUnitId = "ca-app-pub-3940256099942544/5224354917";
+                string adUnitId = "ca-app-pub-2456669905266460/1795119596";
         #elif UNITY_IPHONE
-                string adUnitId = "ca-app-pub-3940256099942544/1712485313";
+                string adUnitId = "unexpected_platform";
         #else
                 string adUnitId = "unexpected_platform";
         #endif

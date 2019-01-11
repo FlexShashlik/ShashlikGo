@@ -57,6 +57,7 @@ public class UIController : MonoBehaviour
         // Get singleton reward based video ad reference.
         rewardBasedVideo = RewardBasedVideoAd.Instance;
 
+        #region VideoEvents
         // Called when an ad request has successfully loaded.
         rewardBasedVideo.OnAdLoaded += HandleRewardBasedVideoLoaded;
         // Called when an ad request failed to load.
@@ -71,9 +72,10 @@ public class UIController : MonoBehaviour
         rewardBasedVideo.OnAdClosed += HandleRewardBasedVideoClosed;
         // Called when the ad click caused the user to leave the application.
         rewardBasedVideo.OnAdLeavingApplication += HandleRewardBasedVideoLeftApplication;
+        #endregion
     }
 
-    #region AdHandlers
+    #region VideoHandlers
     public void HandleRewardBasedVideoLoaded(object sender, EventArgs args)
     {
         rewardBasedVideo.Show();
@@ -108,14 +110,17 @@ public class UIController : MonoBehaviour
     {
         string type = args.Type;
         double amount = args.Amount;
-        MonoBehaviour.print(
-            "HandleRewardBasedVideoRewarded event received for "
-                        + amount.ToString() + " " + type);
+
+        if(type != null)
+            MonoBehaviour.print(
+                "HandleRewardBasedVideoRewarded event received for "
+                + amount.ToString() + " " + type);
 
         GlobalData.Lives = 3;
         m_TextLives.text = $"Lives: {GlobalData.Lives}";
         m_AdWasShown = true;
         m_AdPopup.gameObject.SetActive(false);
+        m_ButtonPause.interactable = true;
     }
 
     public void HandleRewardBasedVideoLeftApplication(object sender, EventArgs args)

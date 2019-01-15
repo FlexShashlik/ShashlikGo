@@ -30,7 +30,7 @@ public class LevelChanger : MonoBehaviour
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        if(sceneIndex == 2 && GlobalData.Score > 0) //if end scene loading
+        if(sceneIndex == GameLevels.THE_END && GlobalData.Score > 0)
         {
             Firebase.Analytics.FirebaseAnalytics.LogEvent(Firebase.Analytics.FirebaseAnalytics.EventPostScore, "score", GlobalData.Score);
             print($"EventPostScore - Score: {GlobalData.Score}");

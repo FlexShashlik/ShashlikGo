@@ -166,7 +166,7 @@ public class UIController : MonoBehaviour
                 m_AdPopup.Open();
             }
             else
-                LevelChanger.FadeToLevel(2); //load the end scene
+                LevelChanger.FadeToLevel(GameLevels.THE_END); 
         }
         else
         {

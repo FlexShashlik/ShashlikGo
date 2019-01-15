@@ -33,7 +33,7 @@ public class MainMenuUIController : MonoBehaviour
 
     public void OnGo()
     {
-        LevelChanger.FadeToLevel(1);
+        LevelChanger.FadeToLevel(GameLevels.MAIN);
     }
 
     public void OnVibration()

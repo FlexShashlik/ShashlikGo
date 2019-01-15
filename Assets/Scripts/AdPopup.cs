@@ -13,7 +13,7 @@ public class AdPopup : MonoBehaviour
 
     public void Close()
     {
-        LevelChanger.FadeToLevel(2); //load the end scene
+        LevelChanger.FadeToLevel(GameLevels.THE_END);
         gameObject.SetActive(false);
     }
 

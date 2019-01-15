@@ -34,9 +34,9 @@ namespace GooglePlayGames
     public const string VersionKeyJarResolverDLL = "00935";
 
     // Current Version.
-    public const int VersionInt = 0x0953;
-    public const string VersionString = "0.9.53";
-    public const string VersionKey = "00953";
+    public const int VersionInt = 0x0957;
+    public const string VersionString = "0.9.57";
+    public const string VersionKey = "00957";
 
     // used to check for the correct min version or play services: 10.2
     public const int MinGmsCoreVersionCode = 10200000;

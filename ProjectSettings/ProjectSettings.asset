@@ -117,7 +117,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.6.5
+  bundleVersion: 1.6.7
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -152,7 +152,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.LonelyPenguins.ShashlikGo
   buildNumber: {}
-  AndroidBundleVersionCode: 22
+  AndroidBundleVersionCode: 23
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -338,42 +338,42 @@ PlayerSettings:
       m_SubKind: 
     - m_Textures:
       - {fileID: 2800000, guid: 0046ee2c6c5040e4296fb159c0295708, type: 3}
-      - {fileID: 2800000, guid: b26b5864301f1fd47baf00fcbff76237, type: 3}
+      - {fileID: 2800000, guid: 7b6cd47ddc7c49a4591adf6257a72580, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
       - {fileID: 2800000, guid: 15c74085f82506f4996e46c5f62e18a3, type: 3}
-      - {fileID: 2800000, guid: b2f22913fbf38e54ca55940797a047c6, type: 3}
+      - {fileID: 2800000, guid: 5fe25ead722236b41b95ca99e24b68fc, type: 3}
       m_Width: 324
       m_Height: 324
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
       - {fileID: 2800000, guid: c247c11aca4d18d4cb429ac4c79d07cf, type: 3}
-      - {fileID: 2800000, guid: 9d9d89fd8ffe0074f88697a09ef1a8d2, type: 3}
+      - {fileID: 2800000, guid: ecb4e77e1f23a7e4b82c75c0412f82da, type: 3}
       m_Width: 216
       m_Height: 216
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
       - {fileID: 2800000, guid: 9bb69efb53f44224ebbe44761960a2f6, type: 3}
-      - {fileID: 2800000, guid: a116b57735d2bb447b05a56e09c057dd, type: 3}
+      - {fileID: 2800000, guid: 83c558a2c667cd34cb70f4447005cbe0, type: 3}
       m_Width: 162
       m_Height: 162
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
       - {fileID: 2800000, guid: 45542f39a2cc96c4483287509f828cf0, type: 3}
-      - {fileID: 2800000, guid: e26943ce94fdf9f438f4a57d8c72dca2, type: 3}
+      - {fileID: 2800000, guid: c4f867ef3667adf4ebf929af04e35958, type: 3}
       m_Width: 108
       m_Height: 108
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
       - {fileID: 2800000, guid: e7cd219c61629354d8efb1cb55b362a1, type: 3}
-      - {fileID: 2800000, guid: 506c8ef5a251fac45b7d6ddad293d4a6, type: 3}
+      - {fileID: 2800000, guid: 087a792f89088fa469c5cac40f97580b, type: 3}
       m_Width: 81
       m_Height: 81
       m_Kind: 2

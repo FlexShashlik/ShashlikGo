@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 68410746}
   - component: {fileID: 68410745}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,8 +539,8 @@ Camera:
   m_GameObject: {fileID: 274998515}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.12156863, g: 0.11372549, b: 0.11372549, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

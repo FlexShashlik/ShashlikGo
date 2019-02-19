@@ -18,7 +18,7 @@ public class UIController : MonoBehaviour
     private Button m_ButtonPause;
 
     [SerializeField]
-    private Sprite m_SpritePause, m_SpritePlay;
+    private Sprite m_SpritePause, m_SpritePlay = null;
 
     [SerializeField]
     private AdPopup m_AdPopup;

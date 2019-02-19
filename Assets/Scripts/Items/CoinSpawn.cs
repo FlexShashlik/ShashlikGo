@@ -8,7 +8,7 @@ public class CoinSpawn : MonoBehaviour
     private float m_CoinLifeTime;
 
     [SerializeField]
-    private float m_MinCoinLifeTime, m_MaxCoinLifeTime;
+    private float m_MinCoinLifeTime, m_MaxCoinLifeTime = 0f;
 
     void Start()
     {

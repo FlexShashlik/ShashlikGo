@@ -3,54 +3,23 @@ using UnityEngine.UI;
 
 public class MainMenuUIController : MonoBehaviour
 {
-    [SerializeField]
-    private Button m_ButtonVibration;
-
-    [SerializeField]
-    private Sprite m_SpriteVibrationOn, m_SpriteVibrationOff;
-
-    [SerializeField]
-    private Button m_ButtonMute;
-
-    [SerializeField]
-    private Sprite m_SpriteMuteOn, m_SpriteMuteOff;
-
-    void Awake()
-    {
-        PlayerSettings.LoadSettings();
-
-        if (PlayerSettings.PrefEnable(PlayerSettings.Vibration))
-            m_ButtonVibration.image.sprite = m_SpriteVibrationOn;
-        else
-            m_ButtonVibration.image.sprite = m_SpriteVibrationOff;
-
-        if (PlayerSettings.PrefEnable(PlayerSettings.Mute))
-            m_ButtonMute.image.sprite = m_SpriteMuteOn;
-        else
-            m_ButtonMute.image.sprite = m_SpriteMuteOff;
-
-    }
-
     public void OnGo()
     {
         LevelChanger.FadeToLevel(GameLevels.MAIN);
     }
 
-    public void OnVibration()
+    public void OnSettings()
     {
-        PlayerSettings.PrefInvert(GameSettings.VIBRATION, ref PlayerSettings.Vibration);
-
-        m_ButtonVibration.image.sprite =
-            PlayerSettings.PrefEnable(PlayerSettings.Vibration) ?
-            m_SpriteVibrationOn : m_SpriteVibrationOff;
+        LevelChanger.FadeToLevel(GameLevels.SETTINGS);
     }
 
-    public void OnMute()
+    public void OnShop()
     {
-        PlayerSettings.PrefInvert(GameSettings.MUTE, ref PlayerSettings.Mute);
+        //TODO
+    }
 
-        m_ButtonMute.image.sprite =
-            PlayerSettings.PrefEnable(PlayerSettings.Mute) ?
-            m_SpriteMuteOn : m_SpriteMuteOff;
+    public void OnAbout()
+    {
+        LevelChanger.FadeToLevel(GameLevels.ABOUT);
     }
 }

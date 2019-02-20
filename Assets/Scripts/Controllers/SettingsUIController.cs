@@ -17,8 +17,6 @@ public class SettingsUIController : MonoBehaviour
 
     void Awake()
     {
-        PlayerSettings.LoadSettings();
-
         if (PlayerSettings.PrefEnable(PlayerSettings.Vibration))
             m_ButtonVibration.image.sprite = m_SpriteVibrationOn;
         else

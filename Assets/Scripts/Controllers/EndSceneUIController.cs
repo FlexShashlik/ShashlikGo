@@ -20,16 +20,26 @@ public class EndSceneUIController : MonoBehaviour
         PlayGamesScript.ShowLeaderboardUI();
     }
 
-    public void Restart()
+    public void OnRestart()
     {
-        //Reset all data
+        ResetAllData();
+        
+        LevelChanger.FadeToLevel(GameLevels.MAIN);
+    }
+
+    public void OnBack()
+    {
+        ResetAllData();
+
+        LevelChanger.FadeToLevel(GameLevels.MAIN_MENU);
+    }
+
+    private void ResetAllData()
+    {
         GlobalData.Lives = 3;
         GlobalData.Score = 0;
         GlobalData.Acceleration = 1f;
         GlobalData.ItemsOnSkewer.Clear();
         InputHandler.SpeedFactor = 7f;
-
-        //Load main scene
-        LevelChanger.FadeToLevel(GameLevels.MAIN);
     }
 }

@@ -3,6 +3,11 @@ using UnityEngine.UI;
 
 public class MainMenuUIController : MonoBehaviour
 {
+    void Awake()
+    {
+        PlayerSettings.LoadSettings();
+    }
+
     public void OnGo()
     {
         LevelChanger.FadeToLevel(GameLevels.MAIN);

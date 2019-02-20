@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class AdPopup : MonoBehaviour
 {
     [SerializeField] Button m_ButtonPause;
+    [SerializeField] Animator m_PopupAnimation;
 
     public void Open()
     {
@@ -13,8 +14,8 @@ public class AdPopup : MonoBehaviour
 
     public void Close()
     {
+        m_PopupAnimation.SetTrigger("Close");
         LevelChanger.FadeToLevel(GameLevels.THE_END);
-        gameObject.SetActive(false);
     }
 
     public void AdRequest()

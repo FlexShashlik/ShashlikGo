@@ -33,6 +33,8 @@ public class UIController : MonoBehaviour
 
     private bool m_AdWasShown = false;
 
+    private float m_tempAcceleration, m_tempSpeedFactor;
+
     void Awake()
     {
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
@@ -162,8 +164,8 @@ public class UIController : MonoBehaviour
             //AdRequest
             if (!m_AdWasShown)
             {
-                OnPause();
                 m_AdPopup.Open();
+                OnPause();
             }
             else
                 LevelChanger.FadeToLevel(GameLevels.THE_END); 
@@ -178,12 +180,16 @@ public class UIController : MonoBehaviour
     {
         if (!m_GameOnPause)
         {
-            Time.timeScale = 0;
+            m_tempAcceleration = GlobalData.Acceleration;
+            GlobalData.Acceleration = 0;
+            m_tempSpeedFactor = InputHandler.SpeedFactor;
+            InputHandler.SpeedFactor = 0;
             m_ButtonPause.image.sprite = m_SpritePlay;
         }
         else
         {
-            Time.timeScale = 1;
+            GlobalData.Acceleration = m_tempAcceleration;
+            InputHandler.SpeedFactor = m_tempSpeedFactor;
             m_ButtonPause.image.sprite = m_SpritePause;
         }
 

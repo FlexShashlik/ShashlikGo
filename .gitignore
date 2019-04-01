@@ -3,6 +3,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Ll]ogs/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
@@ -41,5 +42,10 @@ sysinfo.txt
 *.uvw
 # Photoshop PSD
 *.psd
+
+#API
 /Assets/google-services.json.meta
 /Assets/google-services.json
+
+#Log file
+VersionHandlerSave.log

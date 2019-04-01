@@ -7,10 +7,7 @@ class InedibleItemsSpawn : MonoBehaviour
 
     private float m_CurrentInedibleItemTime;
 
-    void Start()
-    {
-        m_CurrentInedibleItemTime = Random.Range(0.5f, 5f);
-    }
+    void Start() => m_CurrentInedibleItemTime = Random.Range(0.5f, 5f);
 
     void Update()
     {

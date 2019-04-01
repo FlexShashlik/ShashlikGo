@@ -2,15 +2,15 @@
 
 public static class VibrationController
 {
-    #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
         public static AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         public static AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         public static AndroidJavaObject vibrator = currentActivity.Call<AndroidJavaObject>("getSystemService", "vibrator");
-    #else
+#else
         public static AndroidJavaClass unityPlayer;
         public static AndroidJavaObject currentActivity;
         public static AndroidJavaObject vibrator;
-    #endif
+#endif
 
     public static void Vibrate(long milliseconds)
     {
@@ -29,10 +29,10 @@ public static class VibrationController
 
     private static bool isAndroid()
     {
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
 	        return true;
-        #else
+#else
             return false;
-        #endif
+#endif
     }
 }

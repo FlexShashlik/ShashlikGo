@@ -4,10 +4,7 @@ public class ParticleSystemAutoDestroy : MonoBehaviour
 {
     private ParticleSystem m_ps;
 
-    void Start()
-    {
-        m_ps = GetComponent<ParticleSystem>();
-    }
+    void Start() => m_ps = GetComponent<ParticleSystem>();
 
     void Update()
     {

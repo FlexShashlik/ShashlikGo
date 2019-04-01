@@ -29,10 +29,7 @@ public class SettingsUIController : MonoBehaviour
 
     }
 
-    public void OnBack()
-    {
-        LevelChanger.FadeToLevel(GameLevels.MAIN_MENU);
-    }
+    public void OnBack() => LevelChanger.FadeToLevel(GameLevels.MAIN_MENU);
 
     public void OnVibration()
     {

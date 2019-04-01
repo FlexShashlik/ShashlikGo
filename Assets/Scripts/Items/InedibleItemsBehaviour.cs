@@ -11,10 +11,7 @@ public class InedibleItemsBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject m_ExplosionEffect;
 
-    void Update()
-    {
-        Fall();
-    }
+    void Update() => Fall();
 
     void OnCollisionEnter(Collision collision)
     {

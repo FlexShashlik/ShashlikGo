@@ -8,10 +8,7 @@ public class LevelChanger : MonoBehaviour
 
     private static int m_LevelToLoad;
 
-    void Start()
-    {
-        m_Animator = gameObject.GetComponent<Animator>();
-    }
+    void Start() => m_Animator = gameObject.GetComponent<Animator>();
 
     public static void FadeToLevel(int levelIndex)
     {
@@ -19,10 +16,7 @@ public class LevelChanger : MonoBehaviour
         m_Animator.SetTrigger("FadeOut");
     }
 
-    public void OnFadeComplete()
-    {
-        StartCoroutine(LoadAsynchrounously(m_LevelToLoad));
-    }
+    public void OnFadeComplete() => StartCoroutine(LoadAsynchrounously(m_LevelToLoad));
 
     IEnumerator LoadAsynchrounously(int sceneIndex)
     {

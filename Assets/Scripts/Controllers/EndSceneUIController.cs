@@ -15,10 +15,7 @@ public class EndSceneUIController : MonoBehaviour
         m_TextCurrentResult.text = "Current result: " + GlobalData.Score.ToString();
     }
 
-    public void ShowLeaderboards()
-    {
-        PlayGamesScript.ShowLeaderboardUI();
-    }
+    public void ShowLeaderboards() => PlayGamesScript.ShowLeaderboardUI();
 
     public void OnRestart()
     {

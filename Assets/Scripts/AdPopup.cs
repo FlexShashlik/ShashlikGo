@@ -18,8 +18,5 @@ public class AdPopup : MonoBehaviour
         LevelChanger.FadeToLevel(GameLevels.THE_END);
     }
 
-    public void AdRequest()
-    {
-        Messenger.Broadcast(GameEvent.AD_REQUEST);
-    }
+    public void AdRequest() => Messenger.Broadcast(GameEvent.AD_REQUEST);
 }

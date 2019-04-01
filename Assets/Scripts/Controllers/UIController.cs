@@ -198,13 +198,13 @@ public class UIController : MonoBehaviour
 
     private void RequestRewardBasedVideo()
     {
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
                 string adUnitId = "ca-app-pub-2456669905266460/1795119596";
-        #elif UNITY_IPHONE
+#elif UNITY_IPHONE
                 string adUnitId = "unexpected_platform";
-        #else
+#else
                 string adUnitId = "unexpected_platform";
-        #endif
+#endif
 
         // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();

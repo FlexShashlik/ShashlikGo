@@ -13,13 +13,13 @@ class PlayGamesScript : MonoBehaviour
 
     void Start()
     {
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
                 string appId = "ca-app-pub-3940256099942544~3347511713";
-        #elif UNITY_IPHONE
+#elif UNITY_IPHONE
                 string appId = "unexpected_platform";
-        #else
+#else
                 string appId = "unexpected_platform";
-        #endif
+#endif
 
         PlayGamesPlatform.InitializeInstance(config);
 
@@ -32,11 +32,15 @@ class PlayGamesScript : MonoBehaviour
         Auth();
     }
 
-    public static void Auth()
-    {
-        Social.localUser.Authenticate
-            (success => { if (success) { SuccessAuth = true; GetUserMaxScore(); }});
-    }
+    public static void Auth() =>
+        Social.localUser.Authenticate(success => 
+            {
+                if (success)
+                {
+                    SuccessAuth = true;
+                    GetUserMaxScore();
+                }
+            });
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)
     {

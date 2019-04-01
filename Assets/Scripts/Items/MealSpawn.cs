@@ -11,10 +11,7 @@ public class MealSpawn : MonoBehaviour
 
     private float m_CurrentMealTime;
 
-    void Start()
-    {
-        m_CurrentMealTime = m_NewMealTime;
-    }
+    void Start() => m_CurrentMealTime = m_NewMealTime;
 	
 	void Update()
     {

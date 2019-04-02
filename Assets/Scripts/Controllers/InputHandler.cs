@@ -4,13 +4,16 @@ public class InputHandler : MonoBehaviour
 {
     public static float SpeedFactor = 7f;
 
-    public const float SPEED_FACTOR_DECREASE_COEF = 0.2f;
+    public const float SPEED_FACTOR_DECREASE_COEF = 0.4f;
     
     private Camera m_Camera;
     
-    private float m_TouchBoundX = 0.126f;
-
+    private float m_TouchBoundX = 0.3f;
     private float m_TouchBoundY = 0.31f;
+
+    private Ray ray;
+    private Plane plane;
+    private float touchX, skewerX, distance;
 
     void Start() => m_Camera = Camera.main;
 
@@ -20,12 +23,8 @@ public class InputHandler : MonoBehaviour
         if (Input.touchCount <= 0)
             return;
 
-        Ray ray = m_Camera.ScreenPointToRay(Input.GetTouch(0).position);
-        Plane plane = new Plane(Vector3.up, transform.position);
-        float distance = 0f;
-
-        float touchX = ray.GetPoint(distance).x;
-        float skewerX = transform.position.x;
+        ray = m_Camera.ScreenPointToRay(Input.GetTouch(0).position);
+        plane = new Plane(Vector3.up, transform.position);
 
         Vector3 movement = Vector3.zero;
 

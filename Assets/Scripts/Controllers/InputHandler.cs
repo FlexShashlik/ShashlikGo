@@ -38,6 +38,8 @@ public class InputHandler : MonoBehaviour
                 movement.x = GetHorizontalDirection(touchX, skewerX) * SpeedFactor * Time.deltaTime;
 
                 gameObject.transform.position += movement;
+
+                Debug.Log($"touchX = {touchX}");
             }
         }
 #else

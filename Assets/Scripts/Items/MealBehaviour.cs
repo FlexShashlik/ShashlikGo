@@ -65,6 +65,7 @@ public class MealBehaviour : MonoBehaviour
 
         GlobalData.ItemsOnSkewer.Add(gameObject);
         InputHandler.SpeedFactor -= InputHandler.SPEED_FACTOR_DECREASE_COEF;
+        Messenger.Broadcast(GameEvent.SPEED_CHANGE);
 
         m_HasExploded = true;
     }

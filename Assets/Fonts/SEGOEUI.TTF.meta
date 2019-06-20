@@ -1,19 +1,17 @@
 fileFormatVersion: 2
-guid: 939748f5bd228514ba7cd9fd9811e253
+guid: e31059fc24d84e3469f6bee6d4b7e003
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 180
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Ubuntu Mono
+  fontName: Segoe UI
   fontNames:
-  - Ubuntu Mono
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 673aa2e5bbabf6442889afb8700c9cb0, type: 3}
-  - {fileID: 12800000, guid: 5c8c093ac0e273d408048bc368ff82c6, type: 3}
+  - Segoe UI
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

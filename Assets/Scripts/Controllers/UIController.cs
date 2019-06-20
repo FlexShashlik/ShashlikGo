@@ -12,6 +12,9 @@ public class UIController : MonoBehaviour
     private Text m_TextScore;
 
     [SerializeField]
+    private Text m_TextSpeed;
+
+    [SerializeField]
     private Animator m_SkewerOverflowAnimator;
 
     [SerializeField]
@@ -40,6 +43,7 @@ public class UIController : MonoBehaviour
         Messenger.AddListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
         Messenger.AddListener(GameEvent.INEDIBLE_ITEM_PICKUP, OnInedibleItemPickup);
         Messenger.AddListener(GameEvent.AD_REQUEST, RequestRewardBasedVideo);
+        Messenger.AddListener(GameEvent.SPEED_CHANGE, SpeedChange);
 
         PlayGamesScript.GetUserMaxScore();
     }
@@ -49,12 +53,14 @@ public class UIController : MonoBehaviour
         Messenger.RemoveListener(GameEvent.SKEWER_OVERFLOW, OnSkewerOverflow);
         Messenger.RemoveListener(GameEvent.INEDIBLE_ITEM_PICKUP, OnInedibleItemPickup);
         Messenger.RemoveListener(GameEvent.AD_REQUEST, RequestRewardBasedVideo);
+        Messenger.RemoveListener(GameEvent.SPEED_CHANGE, SpeedChange);
     }
 
     void Start()
     {
         m_TextLives.text = $"Lives: {GlobalData.Lives}";
         m_TextScore.text = $"Score: {GlobalData.Score}";
+        SpeedChange();
 
         // Get singleton reward based video ad reference.
         rewardBasedVideo = RewardBasedVideoAd.Instance;
@@ -144,6 +150,7 @@ public class UIController : MonoBehaviour
         }
 
         m_TextScore.text = $"Score: {GlobalData.Score}";
+        SpeedChange();
     }
 
     private void OnInedibleItemPickup()
@@ -168,7 +175,9 @@ public class UIController : MonoBehaviour
                 OnPause();
             }
             else
-                LevelChanger.FadeToLevel(GameLevels.THE_END); 
+            {
+                LevelChanger.FadeToLevel(GameLevels.THE_END);
+            }
         }
         else
         {
@@ -195,6 +204,8 @@ public class UIController : MonoBehaviour
 
         m_GameOnPause = !m_GameOnPause;
     }
+
+    public void SpeedChange() => m_TextSpeed.text = $"Speed: {InputHandler.SpeedFactor}";
 
     private void RequestRewardBasedVideo()
     {

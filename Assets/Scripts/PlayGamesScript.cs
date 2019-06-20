@@ -1,6 +1,5 @@
 ﻿using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-using GoogleMobileAds;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
@@ -32,8 +31,9 @@ class PlayGamesScript : MonoBehaviour
         Auth();
     }
 
-    public static void Auth() =>
-        Social.localUser.Authenticate(success => 
+    public static void Auth()
+    {
+        Social.localUser.Authenticate(success =>
             {
                 if (success)
                 {
@@ -41,6 +41,7 @@ class PlayGamesScript : MonoBehaviour
                     GetUserMaxScore();
                 }
             });
+    }
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)
     {
